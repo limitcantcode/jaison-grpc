@@ -1,3 +1,3 @@
-import common
-import client
-import server
+from . import common
+from . import client
+from . import server
