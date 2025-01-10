@@ -1,0 +1,56 @@
+syntax = "proto3";
+
+option java_package = "ex.jaisongrpc";
+option objc_class_prefix = "jaisongrpc";
+
+package jaisongrpc;
+
+service STTComponentStreamer {
+  rpc invoke (STTComponentRequest) returns (stream STTComponentResponse) {}
+}
+message STTComponentRequest {
+  string run_id = 1;
+  bytes audio = 2;
+}
+message STTComponentResponse {
+  string run_id = 1;
+  string content_chunk = 2;
+}
+
+service T2TComponentStreamer {
+  rpc invoke (T2TComponentRequest) returns (stream T2TComponentResponse) {}
+}
+message T2TComponentRequest {
+  string run_id = 1;
+  string system_input = 2;
+  string user_input = 3;
+}
+message T2TComponentResponse {
+  string run_id = 1;
+  string content_chunk = 2;
+}
+
+service TTSGComponentStreamer {
+  rpc invoke (TTSGComponentRequest) returns (stream TTSGComponentResponse) {}
+}
+message TTSGComponentRequest {
+  string run_id = 1;
+  string content = 2;
+}
+message TTSGComponentResponse {
+  string run_id = 1;
+  bytes audio_chunk = 2;
+}
+
+service TTSCComponentStreamer {
+  rpc invoke (TTSCComponentRequest) returns (stream TTSCComponentResponse) {}
+}
+message TTSCComponentRequest {
+  string run_id = 1;
+  bytes audio = 2;
+}
+message TTSCComponentResponse {
+  string run_id = 1;
+  bytes audio_chunk = 2;
+}
+

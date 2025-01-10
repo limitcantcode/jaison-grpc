@@ -1,0 +1,32 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "jaison-grpc"
+version = "1.0.0"
+description = "Reusable GRPC for Project J.A.I.son components"
+readme = "README.md"
+requires-python = ">=3.9"
+license = {file = "LICENSE"}
+keywords = ["grpc","jaison"]
+authors = [
+    {email = "limit@limit-cc.com"},
+    {name = "Limit Can't Code"},
+]
+maintainers = [
+    {name = "Limit", email = "limit@limit-cc.com"}
+]
+classifiers = [
+    "Programming Language :: Python",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    grpcio==1.68.1
+    grpcio-tools==1.68.1
+]
+
+
+[project.urls]
+documentation = "https://github.com/limitcantcode/jaison-grpc"
+repository = "https://github.com/limitcantcode/jaison-grpc"
