@@ -1,8 +1,27 @@
+from google.protobuf import empty_pb2 as _empty_pb2
 from google.protobuf import descriptor as _descriptor
 from google.protobuf import message as _message
 from typing import ClassVar as _ClassVar, Optional as _Optional
 
 DESCRIPTOR: _descriptor.FileDescriptor
+
+class Metadata(_message.Message):
+    __slots__ = ("id", "name", "type", "is_windows_compatible", "is_unix_compatible", "windows_run_script", "unix_run_script")
+    ID_FIELD_NUMBER: _ClassVar[int]
+    NAME_FIELD_NUMBER: _ClassVar[int]
+    TYPE_FIELD_NUMBER: _ClassVar[int]
+    IS_WINDOWS_COMPATIBLE_FIELD_NUMBER: _ClassVar[int]
+    IS_UNIX_COMPATIBLE_FIELD_NUMBER: _ClassVar[int]
+    WINDOWS_RUN_SCRIPT_FIELD_NUMBER: _ClassVar[int]
+    UNIX_RUN_SCRIPT_FIELD_NUMBER: _ClassVar[int]
+    id: str
+    name: str
+    type: str
+    is_windows_compatible: bool
+    is_unix_compatible: bool
+    windows_run_script: str
+    unix_run_script: str
+    def __init__(self, id: _Optional[str] = ..., name: _Optional[str] = ..., type: _Optional[str] = ..., is_windows_compatible: bool = ..., is_unix_compatible: bool = ..., windows_run_script: _Optional[str] = ..., unix_run_script: _Optional[str] = ...) -> None: ...
 
 class STTComponentRequest(_message.Message):
     __slots__ = ("run_id", "audio")

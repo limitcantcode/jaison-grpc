@@ -1,11 +1,23 @@
 syntax = "proto3";
 
+import "google/protobuf/empty.proto";
 option java_package = "ex.jaisongrpc";
 option objc_class_prefix = "jaisongrpc";
 
 package jaisongrpc;
 
+message Metadata {
+  string id = 1;
+  string name = 2;
+  string type = 3;
+  bool is_windows_compatible = 4;
+  bool is_unix_compatible = 5;
+  string windows_run_script = 6;
+  string unix_run_script = 7;
+}
+
 service STTComponentStreamer {
+  rpc metadata (google.protobuf.Empty) returns (Metadata) {}
   rpc invoke (STTComponentRequest) returns (stream STTComponentResponse) {}
 }
 message STTComponentRequest {
@@ -18,6 +30,7 @@ message STTComponentResponse {
 }
 
 service T2TComponentStreamer {
+  rpc metadata (google.protobuf.Empty) returns (Metadata) {}
   rpc invoke (T2TComponentRequest) returns (stream T2TComponentResponse) {}
 }
 message T2TComponentRequest {
@@ -31,6 +44,7 @@ message T2TComponentResponse {
 }
 
 service TTSGComponentStreamer {
+  rpc metadata (google.protobuf.Empty) returns (Metadata) {}
   rpc invoke (TTSGComponentRequest) returns (stream TTSGComponentResponse) {}
 }
 message TTSGComponentRequest {
@@ -43,6 +57,7 @@ message TTSGComponentResponse {
 }
 
 service TTSCComponentStreamer {
+  rpc metadata (google.protobuf.Empty) returns (Metadata) {}
   rpc invoke (TTSCComponentRequest) returns (stream TTSCComponentResponse) {}
 }
 message TTSCComponentRequest {
