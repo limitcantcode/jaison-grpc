@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "jaison-grpc"
-version = "1.1.0"
+version = "1.1.1"
 description = "Reusable GRPC for Project J.A.I.son components"
 readme = "README.md"
 requires-python = ">=3.9"
