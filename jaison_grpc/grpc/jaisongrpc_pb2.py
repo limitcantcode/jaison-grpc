@@ -25,7 +25,7 @@ _sym_db = _symbol_database.Default()
 from google.protobuf import empty_pb2 as google_dot_protobuf_dot_empty__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x10jaisongrpc.proto\x12\njaisongrpc\x1a\x1bgoogle/protobuf/empty.proto\"\xa2\x01\n\x08Metadata\x12\n\n\x02id\x18\x01 \x01(\t\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x0c\n\x04type\x18\x03 \x01(\t\x12\x1d\n\x15is_windows_compatible\x18\x04 \x01(\x08\x12\x1a\n\x12is_unix_compatible\x18\x05 \x01(\x08\x12\x1a\n\x12windows_run_script\x18\x06 \x01(\t\x12\x17\n\x0funix_run_script\x18\x07 \x01(\t\"4\n\x13STTComponentRequest\x12\x0e\n\x06run_id\x18\x01 \x01(\t\x12\r\n\x05\x61udio\x18\x02 \x01(\x0c\"=\n\x14STTComponentResponse\x12\x0e\n\x06run_id\x18\x01 \x01(\t\x12\x15\n\rcontent_chunk\x18\x02 \x01(\t\"O\n\x13T2TComponentRequest\x12\x0e\n\x06run_id\x18\x01 \x01(\t\x12\x14\n\x0csystem_input\x18\x02 \x01(\t\x12\x12\n\nuser_input\x18\x03 \x01(\t\"=\n\x14T2TComponentResponse\x12\x0e\n\x06run_id\x18\x01 \x01(\t\x12\x15\n\rcontent_chunk\x18\x02 \x01(\t\"7\n\x14TTSGComponentRequest\x12\x0e\n\x06run_id\x18\x01 \x01(\t\x12\x0f\n\x07\x63ontent\x18\x02 \x01(\t\"<\n\x15TTSGComponentResponse\x12\x0e\n\x06run_id\x18\x01 \x01(\t\x12\x13\n\x0b\x61udio_chunk\x18\x02 \x01(\x0c\"5\n\x14TTSCComponentRequest\x12\x0e\n\x06run_id\x18\x01 \x01(\t\x12\r\n\x05\x61udio\x18\x02 \x01(\x0c\"<\n\x15TTSCComponentResponse\x12\x0e\n\x06run_id\x18\x01 \x01(\t\x12\x13\n\x0b\x61udio_chunk\x18\x02 \x01(\x0c\x32\xa3\x01\n\x14STTComponentStreamer\x12:\n\x08metadata\x12\x16.google.protobuf.Empty\x1a\x14.jaisongrpc.Metadata\"\x00\x12O\n\x06invoke\x12\x1f.jaisongrpc.STTComponentRequest\x1a .jaisongrpc.STTComponentResponse\"\x00\x30\x01\x32\xa3\x01\n\x14T2TComponentStreamer\x12:\n\x08metadata\x12\x16.google.protobuf.Empty\x1a\x14.jaisongrpc.Metadata\"\x00\x12O\n\x06invoke\x12\x1f.jaisongrpc.T2TComponentRequest\x1a .jaisongrpc.T2TComponentResponse\"\x00\x30\x01\x32\xa6\x01\n\x15TTSGComponentStreamer\x12:\n\x08metadata\x12\x16.google.protobuf.Empty\x1a\x14.jaisongrpc.Metadata\"\x00\x12Q\n\x06invoke\x12 .jaisongrpc.TTSGComponentRequest\x1a!.jaisongrpc.TTSGComponentResponse\"\x00\x30\x01\x32\xa6\x01\n\x15TTSCComponentStreamer\x12:\n\x08metadata\x12\x16.google.protobuf.Empty\x1a\x14.jaisongrpc.Metadata\"\x00\x12Q\n\x06invoke\x12 .jaisongrpc.TTSCComponentRequest\x1a!.jaisongrpc.TTSCComponentResponse\"\x00\x30\x01\x42\x1c\n\rex.jaisongrpc\xa2\x02\njaisongrpcb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x10jaisongrpc.proto\x12\njaisongrpc\x1a\x1bgoogle/protobuf/empty.proto\"\xa2\x01\n\x08Metadata\x12\n\n\x02id\x18\x01 \x01(\t\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x0c\n\x04type\x18\x03 \x01(\t\x12\x1d\n\x15is_windows_compatible\x18\x04 \x01(\x08\x12\x1a\n\x12is_unix_compatible\x18\x05 \x01(\x08\x12\x1a\n\x12windows_run_script\x18\x06 \x01(\t\x12\x17\n\x0funix_run_script\x18\x07 \x01(\t\"4\n\x13STTComponentRequest\x12\x0e\n\x06run_id\x18\x01 \x01(\t\x12\r\n\x05\x61udio\x18\x02 \x01(\x0c\"=\n\x14STTComponentResponse\x12\x0e\n\x06run_id\x18\x01 \x01(\t\x12\x15\n\rcontent_chunk\x18\x02 \x01(\t\"O\n\x13T2TComponentRequest\x12\x0e\n\x06run_id\x18\x01 \x01(\t\x12\x14\n\x0csystem_input\x18\x02 \x01(\t\x12\x12\n\nuser_input\x18\x03 \x01(\t\"=\n\x14T2TComponentResponse\x12\x0e\n\x06run_id\x18\x01 \x01(\t\x12\x15\n\rcontent_chunk\x18\x02 \x01(\t\"7\n\x14TTSGComponentRequest\x12\x0e\n\x06run_id\x18\x01 \x01(\t\x12\x0f\n\x07\x63ontent\x18\x02 \x01(\t\"<\n\x15TTSGComponentResponse\x12\x0e\n\x06run_id\x18\x01 \x01(\t\x12\x13\n\x0b\x61udio_chunk\x18\x02 \x01(\x0c\"5\n\x14TTSCComponentRequest\x12\x0e\n\x06run_id\x18\x01 \x01(\t\x12\r\n\x05\x61udio\x18\x02 \x01(\x0c\"<\n\x15TTSCComponentResponse\x12\x0e\n\x06run_id\x18\x01 \x01(\t\x12\x13\n\x0b\x61udio_chunk\x18\x02 \x01(\x0c\x32N\n\x10MetadataInformer\x12:\n\x08metadata\x12\x16.google.protobuf.Empty\x1a\x14.jaisongrpc.Metadata\"\x00\x32g\n\x14STTComponentStreamer\x12O\n\x06invoke\x12\x1f.jaisongrpc.STTComponentRequest\x1a .jaisongrpc.STTComponentResponse\"\x00\x30\x01\x32g\n\x14T2TComponentStreamer\x12O\n\x06invoke\x12\x1f.jaisongrpc.T2TComponentRequest\x1a .jaisongrpc.T2TComponentResponse\"\x00\x30\x01\x32j\n\x15TTSGComponentStreamer\x12Q\n\x06invoke\x12 .jaisongrpc.TTSGComponentRequest\x1a!.jaisongrpc.TTSGComponentResponse\"\x00\x30\x01\x32j\n\x15TTSCComponentStreamer\x12Q\n\x06invoke\x12 .jaisongrpc.TTSCComponentRequest\x1a!.jaisongrpc.TTSCComponentResponse\"\x00\x30\x01\x42\x1c\n\rex.jaisongrpc\xa2\x02\njaisongrpcb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
@@ -51,12 +51,14 @@ if not _descriptor._USE_C_DESCRIPTORS:
   _globals['_TTSCCOMPONENTREQUEST']._serialized_end=659
   _globals['_TTSCCOMPONENTRESPONSE']._serialized_start=661
   _globals['_TTSCCOMPONENTRESPONSE']._serialized_end=721
-  _globals['_STTCOMPONENTSTREAMER']._serialized_start=724
-  _globals['_STTCOMPONENTSTREAMER']._serialized_end=887
-  _globals['_T2TCOMPONENTSTREAMER']._serialized_start=890
-  _globals['_T2TCOMPONENTSTREAMER']._serialized_end=1053
-  _globals['_TTSGCOMPONENTSTREAMER']._serialized_start=1056
-  _globals['_TTSGCOMPONENTSTREAMER']._serialized_end=1222
-  _globals['_TTSCCOMPONENTSTREAMER']._serialized_start=1225
-  _globals['_TTSCCOMPONENTSTREAMER']._serialized_end=1391
+  _globals['_METADATAINFORMER']._serialized_start=723
+  _globals['_METADATAINFORMER']._serialized_end=801
+  _globals['_STTCOMPONENTSTREAMER']._serialized_start=803
+  _globals['_STTCOMPONENTSTREAMER']._serialized_end=906
+  _globals['_T2TCOMPONENTSTREAMER']._serialized_start=908
+  _globals['_T2TCOMPONENTSTREAMER']._serialized_end=1011
+  _globals['_TTSGCOMPONENTSTREAMER']._serialized_start=1013
+  _globals['_TTSGCOMPONENTSTREAMER']._serialized_end=1119
+  _globals['_TTSCCOMPONENTSTREAMER']._serialized_start=1121
+  _globals['_TTSCCOMPONENTSTREAMER']._serialized_end=1227
 # @@protoc_insertion_point(module_scope)

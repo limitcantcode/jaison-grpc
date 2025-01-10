@@ -6,6 +6,9 @@ option objc_class_prefix = "jaisongrpc";
 
 package jaisongrpc;
 
+service MetadataInformer {
+  rpc metadata (google.protobuf.Empty) returns (Metadata) {}
+}
 message Metadata {
   string id = 1;
   string name = 2;
@@ -17,7 +20,6 @@ message Metadata {
 }
 
 service STTComponentStreamer {
-  rpc metadata (google.protobuf.Empty) returns (Metadata) {}
   rpc invoke (STTComponentRequest) returns (stream STTComponentResponse) {}
 }
 message STTComponentRequest {
@@ -30,7 +32,6 @@ message STTComponentResponse {
 }
 
 service T2TComponentStreamer {
-  rpc metadata (google.protobuf.Empty) returns (Metadata) {}
   rpc invoke (T2TComponentRequest) returns (stream T2TComponentResponse) {}
 }
 message T2TComponentRequest {
@@ -44,7 +45,6 @@ message T2TComponentResponse {
 }
 
 service TTSGComponentStreamer {
-  rpc metadata (google.protobuf.Empty) returns (Metadata) {}
   rpc invoke (TTSGComponentRequest) returns (stream TTSGComponentResponse) {}
 }
 message TTSGComponentRequest {
@@ -57,7 +57,6 @@ message TTSGComponentResponse {
 }
 
 service TTSCComponentStreamer {
-  rpc metadata (google.protobuf.Empty) returns (Metadata) {}
   rpc invoke (TTSCComponentRequest) returns (stream TTSCComponentResponse) {}
 }
 message TTSCComponentRequest {
