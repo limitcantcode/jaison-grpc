@@ -24,12 +24,18 @@ class Metadata(_message.Message):
     def __init__(self, id: _Optional[str] = ..., name: _Optional[str] = ..., type: _Optional[str] = ..., is_windows_compatible: bool = ..., is_unix_compatible: bool = ..., windows_run_script: _Optional[str] = ..., unix_run_script: _Optional[str] = ...) -> None: ...
 
 class STTComponentRequest(_message.Message):
-    __slots__ = ("run_id", "audio")
+    __slots__ = ("run_id", "audio", "channels", "sample_width", "sample_rate")
     RUN_ID_FIELD_NUMBER: _ClassVar[int]
     AUDIO_FIELD_NUMBER: _ClassVar[int]
+    CHANNELS_FIELD_NUMBER: _ClassVar[int]
+    SAMPLE_WIDTH_FIELD_NUMBER: _ClassVar[int]
+    SAMPLE_RATE_FIELD_NUMBER: _ClassVar[int]
     run_id: str
     audio: bytes
-    def __init__(self, run_id: _Optional[str] = ..., audio: _Optional[bytes] = ...) -> None: ...
+    channels: int
+    sample_width: int
+    sample_rate: int
+    def __init__(self, run_id: _Optional[str] = ..., audio: _Optional[bytes] = ..., channels: _Optional[int] = ..., sample_width: _Optional[int] = ..., sample_rate: _Optional[int] = ...) -> None: ...
 
 class STTComponentResponse(_message.Message):
     __slots__ = ("run_id", "content_chunk")
@@ -66,25 +72,43 @@ class TTSGComponentRequest(_message.Message):
     def __init__(self, run_id: _Optional[str] = ..., content: _Optional[str] = ...) -> None: ...
 
 class TTSGComponentResponse(_message.Message):
-    __slots__ = ("run_id", "audio_chunk")
+    __slots__ = ("run_id", "audio_chunk", "channels", "sample_width", "sample_rate")
     RUN_ID_FIELD_NUMBER: _ClassVar[int]
     AUDIO_CHUNK_FIELD_NUMBER: _ClassVar[int]
+    CHANNELS_FIELD_NUMBER: _ClassVar[int]
+    SAMPLE_WIDTH_FIELD_NUMBER: _ClassVar[int]
+    SAMPLE_RATE_FIELD_NUMBER: _ClassVar[int]
     run_id: str
     audio_chunk: bytes
-    def __init__(self, run_id: _Optional[str] = ..., audio_chunk: _Optional[bytes] = ...) -> None: ...
+    channels: int
+    sample_width: int
+    sample_rate: int
+    def __init__(self, run_id: _Optional[str] = ..., audio_chunk: _Optional[bytes] = ..., channels: _Optional[int] = ..., sample_width: _Optional[int] = ..., sample_rate: _Optional[int] = ...) -> None: ...
 
 class TTSCComponentRequest(_message.Message):
-    __slots__ = ("run_id", "audio")
+    __slots__ = ("run_id", "audio", "channels", "sample_width", "sample_rate")
     RUN_ID_FIELD_NUMBER: _ClassVar[int]
     AUDIO_FIELD_NUMBER: _ClassVar[int]
+    CHANNELS_FIELD_NUMBER: _ClassVar[int]
+    SAMPLE_WIDTH_FIELD_NUMBER: _ClassVar[int]
+    SAMPLE_RATE_FIELD_NUMBER: _ClassVar[int]
     run_id: str
     audio: bytes
-    def __init__(self, run_id: _Optional[str] = ..., audio: _Optional[bytes] = ...) -> None: ...
+    channels: int
+    sample_width: int
+    sample_rate: int
+    def __init__(self, run_id: _Optional[str] = ..., audio: _Optional[bytes] = ..., channels: _Optional[int] = ..., sample_width: _Optional[int] = ..., sample_rate: _Optional[int] = ...) -> None: ...
 
 class TTSCComponentResponse(_message.Message):
-    __slots__ = ("run_id", "audio_chunk")
+    __slots__ = ("run_id", "audio_chunk", "channels", "sample_width", "sample_rate")
     RUN_ID_FIELD_NUMBER: _ClassVar[int]
     AUDIO_CHUNK_FIELD_NUMBER: _ClassVar[int]
+    CHANNELS_FIELD_NUMBER: _ClassVar[int]
+    SAMPLE_WIDTH_FIELD_NUMBER: _ClassVar[int]
+    SAMPLE_RATE_FIELD_NUMBER: _ClassVar[int]
     run_id: str
     audio_chunk: bytes
-    def __init__(self, run_id: _Optional[str] = ..., audio_chunk: _Optional[bytes] = ...) -> None: ...
+    channels: int
+    sample_width: int
+    sample_rate: int
+    def __init__(self, run_id: _Optional[str] = ..., audio_chunk: _Optional[bytes] = ..., channels: _Optional[int] = ..., sample_width: _Optional[int] = ..., sample_rate: _Optional[int] = ...) -> None: ...

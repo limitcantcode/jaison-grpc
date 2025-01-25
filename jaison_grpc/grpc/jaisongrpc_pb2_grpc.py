@@ -107,7 +107,7 @@ class STTComponentStreamerStub(object):
         Args:
             channel: A grpc.Channel.
         """
-        self.invoke = channel.unary_stream(
+        self.invoke = channel.stream_stream(
                 '/jaisongrpc.STTComponentStreamer/invoke',
                 request_serializer=jaisongrpc__pb2.STTComponentRequest.SerializeToString,
                 response_deserializer=jaisongrpc__pb2.STTComponentResponse.FromString,
@@ -117,7 +117,7 @@ class STTComponentStreamerStub(object):
 class STTComponentStreamerServicer(object):
     """Missing associated documentation comment in .proto file."""
 
-    def invoke(self, request, context):
+    def invoke(self, request_iterator, context):
         """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
@@ -126,7 +126,7 @@ class STTComponentStreamerServicer(object):
 
 def add_STTComponentStreamerServicer_to_server(servicer, server):
     rpc_method_handlers = {
-            'invoke': grpc.unary_stream_rpc_method_handler(
+            'invoke': grpc.stream_stream_rpc_method_handler(
                     servicer.invoke,
                     request_deserializer=jaisongrpc__pb2.STTComponentRequest.FromString,
                     response_serializer=jaisongrpc__pb2.STTComponentResponse.SerializeToString,
@@ -143,7 +143,7 @@ class STTComponentStreamer(object):
     """Missing associated documentation comment in .proto file."""
 
     @staticmethod
-    def invoke(request,
+    def invoke(request_iterator,
             target,
             options=(),
             channel_credentials=None,
@@ -153,8 +153,8 @@ class STTComponentStreamer(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_stream(
-            request,
+        return grpc.experimental.stream_stream(
+            request_iterator,
             target,
             '/jaisongrpc.STTComponentStreamer/invoke',
             jaisongrpc__pb2.STTComponentRequest.SerializeToString,
@@ -179,7 +179,7 @@ class T2TComponentStreamerStub(object):
         Args:
             channel: A grpc.Channel.
         """
-        self.invoke = channel.unary_stream(
+        self.invoke = channel.stream_stream(
                 '/jaisongrpc.T2TComponentStreamer/invoke',
                 request_serializer=jaisongrpc__pb2.T2TComponentRequest.SerializeToString,
                 response_deserializer=jaisongrpc__pb2.T2TComponentResponse.FromString,
@@ -189,7 +189,7 @@ class T2TComponentStreamerStub(object):
 class T2TComponentStreamerServicer(object):
     """Missing associated documentation comment in .proto file."""
 
-    def invoke(self, request, context):
+    def invoke(self, request_iterator, context):
         """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
@@ -198,7 +198,7 @@ class T2TComponentStreamerServicer(object):
 
 def add_T2TComponentStreamerServicer_to_server(servicer, server):
     rpc_method_handlers = {
-            'invoke': grpc.unary_stream_rpc_method_handler(
+            'invoke': grpc.stream_stream_rpc_method_handler(
                     servicer.invoke,
                     request_deserializer=jaisongrpc__pb2.T2TComponentRequest.FromString,
                     response_serializer=jaisongrpc__pb2.T2TComponentResponse.SerializeToString,
@@ -215,7 +215,7 @@ class T2TComponentStreamer(object):
     """Missing associated documentation comment in .proto file."""
 
     @staticmethod
-    def invoke(request,
+    def invoke(request_iterator,
             target,
             options=(),
             channel_credentials=None,
@@ -225,8 +225,8 @@ class T2TComponentStreamer(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_stream(
-            request,
+        return grpc.experimental.stream_stream(
+            request_iterator,
             target,
             '/jaisongrpc.T2TComponentStreamer/invoke',
             jaisongrpc__pb2.T2TComponentRequest.SerializeToString,
@@ -251,7 +251,7 @@ class TTSGComponentStreamerStub(object):
         Args:
             channel: A grpc.Channel.
         """
-        self.invoke = channel.unary_stream(
+        self.invoke = channel.stream_stream(
                 '/jaisongrpc.TTSGComponentStreamer/invoke',
                 request_serializer=jaisongrpc__pb2.TTSGComponentRequest.SerializeToString,
                 response_deserializer=jaisongrpc__pb2.TTSGComponentResponse.FromString,
@@ -261,7 +261,7 @@ class TTSGComponentStreamerStub(object):
 class TTSGComponentStreamerServicer(object):
     """Missing associated documentation comment in .proto file."""
 
-    def invoke(self, request, context):
+    def invoke(self, request_iterator, context):
         """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
@@ -270,7 +270,7 @@ class TTSGComponentStreamerServicer(object):
 
 def add_TTSGComponentStreamerServicer_to_server(servicer, server):
     rpc_method_handlers = {
-            'invoke': grpc.unary_stream_rpc_method_handler(
+            'invoke': grpc.stream_stream_rpc_method_handler(
                     servicer.invoke,
                     request_deserializer=jaisongrpc__pb2.TTSGComponentRequest.FromString,
                     response_serializer=jaisongrpc__pb2.TTSGComponentResponse.SerializeToString,
@@ -287,7 +287,7 @@ class TTSGComponentStreamer(object):
     """Missing associated documentation comment in .proto file."""
 
     @staticmethod
-    def invoke(request,
+    def invoke(request_iterator,
             target,
             options=(),
             channel_credentials=None,
@@ -297,8 +297,8 @@ class TTSGComponentStreamer(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_stream(
-            request,
+        return grpc.experimental.stream_stream(
+            request_iterator,
             target,
             '/jaisongrpc.TTSGComponentStreamer/invoke',
             jaisongrpc__pb2.TTSGComponentRequest.SerializeToString,
@@ -323,7 +323,7 @@ class TTSCComponentStreamerStub(object):
         Args:
             channel: A grpc.Channel.
         """
-        self.invoke = channel.unary_stream(
+        self.invoke = channel.stream_stream(
                 '/jaisongrpc.TTSCComponentStreamer/invoke',
                 request_serializer=jaisongrpc__pb2.TTSCComponentRequest.SerializeToString,
                 response_deserializer=jaisongrpc__pb2.TTSCComponentResponse.FromString,
@@ -333,7 +333,7 @@ class TTSCComponentStreamerStub(object):
 class TTSCComponentStreamerServicer(object):
     """Missing associated documentation comment in .proto file."""
 
-    def invoke(self, request, context):
+    def invoke(self, request_iterator, context):
         """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
@@ -342,7 +342,7 @@ class TTSCComponentStreamerServicer(object):
 
 def add_TTSCComponentStreamerServicer_to_server(servicer, server):
     rpc_method_handlers = {
-            'invoke': grpc.unary_stream_rpc_method_handler(
+            'invoke': grpc.stream_stream_rpc_method_handler(
                     servicer.invoke,
                     request_deserializer=jaisongrpc__pb2.TTSCComponentRequest.FromString,
                     response_serializer=jaisongrpc__pb2.TTSCComponentResponse.SerializeToString,
@@ -359,7 +359,7 @@ class TTSCComponentStreamer(object):
     """Missing associated documentation comment in .proto file."""
 
     @staticmethod
-    def invoke(request,
+    def invoke(request_iterator,
             target,
             options=(),
             channel_credentials=None,
@@ -369,8 +369,8 @@ class TTSCComponentStreamer(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_stream(
-            request,
+        return grpc.experimental.stream_stream(
+            request_iterator,
             target,
             '/jaisongrpc.TTSCComponentStreamer/invoke',
             jaisongrpc__pb2.TTSCComponentRequest.SerializeToString,

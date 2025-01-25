@@ -13,3 +13,11 @@ pip install jaison-grpc
 
 ## Contributing
 I am accepting contributions for this package. If you would like to contribute, please refer to [CONTRIBUTING](https://github.com/limitcantcode/jaison-grpc/tree/main/CONTRIBUTING.md).
+
+
+## Notes
+To compile:
+```
+python -m grpc_tools.protoc -I ./proto --python_out=./jaison_grpc/grpc --pyi_out=./jaison_grpc/grpc --grpc_python_out=. ./proto/jaisongrpc.proto
+```
+To create/upload updated builds: https://packaging.python.org/en/latest/tutorials/packaging-projects/

@@ -20,19 +20,23 @@ message Metadata {
 }
 
 service STTComponentStreamer {
-  rpc invoke (STTComponentRequest) returns (stream STTComponentResponse) {}
+  rpc invoke (stream STTComponentRequest) returns (stream STTComponentResponse) {}
 }
 message STTComponentRequest {
   string run_id = 1;
   bytes audio = 2;
+  int32 channels = 3;
+  int32 sample_width = 4;
+  int32 sample_rate = 5;
 }
+
 message STTComponentResponse {
   string run_id = 1;
   string content_chunk = 2;
 }
 
 service T2TComponentStreamer {
-  rpc invoke (T2TComponentRequest) returns (stream T2TComponentResponse) {}
+  rpc invoke (stream T2TComponentRequest) returns (stream T2TComponentResponse) {}
 }
 message T2TComponentRequest {
   string run_id = 1;
@@ -45,7 +49,7 @@ message T2TComponentResponse {
 }
 
 service TTSGComponentStreamer {
-  rpc invoke (TTSGComponentRequest) returns (stream TTSGComponentResponse) {}
+  rpc invoke (stream TTSGComponentRequest) returns (stream TTSGComponentResponse) {}
 }
 message TTSGComponentRequest {
   string run_id = 1;
@@ -54,17 +58,26 @@ message TTSGComponentRequest {
 message TTSGComponentResponse {
   string run_id = 1;
   bytes audio_chunk = 2;
+  int32 channels = 3;
+  int32 sample_width = 4;
+  int32 sample_rate = 5;
 }
 
 service TTSCComponentStreamer {
-  rpc invoke (TTSCComponentRequest) returns (stream TTSCComponentResponse) {}
+  rpc invoke (stream TTSCComponentRequest) returns (stream TTSCComponentResponse) {}
 }
 message TTSCComponentRequest {
   string run_id = 1;
   bytes audio = 2;
+  int32 channels = 3;
+  int32 sample_width = 4;
+  int32 sample_rate = 5;
 }
 message TTSCComponentResponse {
   string run_id = 1;
   bytes audio_chunk = 2;
+  int32 channels = 3;
+  int32 sample_width = 4;
+  int32 sample_rate = 5;
 }
 
